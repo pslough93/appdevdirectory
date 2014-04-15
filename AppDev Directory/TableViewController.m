@@ -7,6 +7,7 @@
 //
 
 #import "TableViewController.h"
+#import "Profile.h"
 
 @interface TableViewController ()
 
@@ -27,7 +28,16 @@
 {
     [super viewDidLoad];
     
-    self.profiles = [NSArray arrayWithObjects:@"name1", @"name2", @"name3", @"name4", nil];
+    NSDictionary *profile1 = [NSDictionary dictionaryWithObjectsAndKeys:@"Patrick", @"name", @"2015", @"year", nil];
+    
+    NSDictionary *profile2 = [NSDictionary dictionaryWithObjectsAndKeys:@"Pat", @"name", @"2015", @"year", nil];
+
+    NSDictionary *profile3 = [NSDictionary dictionaryWithObjectsAndKeys:@"Rick", @"name", @"2015", @"year", nil];
+
+    self.profiles = [NSArray arrayWithObjects:profile1,profile2,profile3, nil];
+    
+
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,7 +64,9 @@
     static NSString *cellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
-    cell.textLabel.text = [self.profiles objectAtIndex:indexPath.row];
+    NSDictionary *profile = [self.profiles objectAtIndex:indexPath.row];
+    cell.textLabel.text = [profile valueForKey:@"name"];
+    cell.detailTextLabel.text = [profile valueForKey:@"year"];
     
     return cell;
 }

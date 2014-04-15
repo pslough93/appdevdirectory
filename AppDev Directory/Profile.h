@@ -17,4 +17,7 @@
 @property (nonatomic, strong) NSString *email;
 @property (nonatomic, strong) NSURL *image;
 
+- (id) initWithName:(NSString *)name;
++ (id) profileWithName:(NSString *)name;
+
 @end

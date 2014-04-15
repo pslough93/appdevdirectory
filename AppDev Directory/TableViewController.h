@@ -10,6 +10,6 @@
 
 @interface TableViewController : UITableViewController
 
-@property (strong, nonatomic) NSMutableArray *profiles;
+@property (strong, nonatomic) NSArray *profiles;
 
 @end
