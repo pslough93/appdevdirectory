@@ -10,14 +10,11 @@
 
 @interface Profile : NSObject
 
-@property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *year;
-@property (nonatomic, strong) NSString *role;
-@property (nonatomic, strong) NSString *cellphone;
-@property (nonatomic, strong) NSString *email;
-@property (nonatomic, strong) NSURL *image;
-
+@property(strong, nonatomic) NSString *name;
+@property(strong, nonatomic) NSString *year;
+@property(strong, nonatomic) NSString *image;
 - (id) initWithName:(NSString *)name;
 + (id) profileWithName:(NSString *)name;
+- (NSURL*) imageURL;
 
 @end

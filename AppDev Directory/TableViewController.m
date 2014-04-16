@@ -28,15 +28,24 @@
 {
     [super viewDidLoad];
     
-    NSDictionary *profile1 = [NSDictionary dictionaryWithObjectsAndKeys:@"Patrick", @"name", @"2015", @"year", nil];
+    NSURL *directoryURL = [NSURL URLWithString:@"http://grinnellappdev.com/tutorials/appdev_directory.json"];
     
-    NSDictionary *profile2 = [NSDictionary dictionaryWithObjectsAndKeys:@"Pat", @"name", @"2015", @"year", nil];
-
-    NSDictionary *profile3 = [NSDictionary dictionaryWithObjectsAndKeys:@"Rick", @"name", @"2015", @"year", nil];
-
-    self.profiles = [NSArray arrayWithObjects:profile1,profile2,profile3, nil];
+    NSData *directoryData = [NSData dataWithContentsOfURL:directoryURL];
     
-
+    NSError *error = nil;
+    
+    NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:directoryData options:0 error:&error];
+    
+    self.profiles = [NSMutableArray array];
+    
+    NSArray *profileArray = [dataDictionary objectForKey:@"members"];
+    
+    for (NSDictionary *profDict in profileArray) {
+        Profile * profile = [Profile profileWithName:[profDict objectForKey:@"name"]];
+        profile.year = [profDict objectForKey:@"year"];
+        profile.image = [profDict objectForKey:@"image"];
+        [self.profiles addObject:profile];
+    }
 
 }
 
@@ -64,61 +73,18 @@
     static NSString *cellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
-    NSDictionary *profile = [self.profiles objectAtIndex:indexPath.row];
-    cell.textLabel.text = [profile valueForKey:@"name"];
-    cell.detailTextLabel.text = [profile valueForKey:@"year"];
+    Profile *profile = [self.profiles objectAtIndex:indexPath.row];
+    
+    NSData *imageData = [NSData dataWithContentsOfURL:profile.imageURL];
+    UIImage *image = [UIImage imageWithData:imageData];
+    
+    cell.imageView.image = image;
+    cell.textLabel.text = profile.name;
     
     return cell;
 }
 
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

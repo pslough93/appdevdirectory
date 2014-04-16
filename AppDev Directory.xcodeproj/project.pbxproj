@@ -21,6 +21,7 @@
 		CD09CF7118FD9B36005D1974 /* AppDev_DirectoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD09CF7018FD9B36005D1974 /* AppDev_DirectoryTests.m */; };
 		CD09CF7B18FD9B52005D1974 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD09CF7A18FD9B52005D1974 /* MainStoryboard.storyboard */; };
 		CD09CF7E18FD9BAC005D1974 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD09CF7D18FD9BAC005D1974 /* TableViewController.m */; };
+		CD63A54118FE0141005743D0 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = CD63A54018FE0141005743D0 /* Profile.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		CD09CF7A18FD9B52005D1974 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		CD09CF7C18FD9BAC005D1974 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		CD09CF7D18FD9BAC005D1974 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		CD63A53F18FE0141005743D0 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
+		CD63A54018FE0141005743D0 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +119,8 @@
 				CD09CF5B18FD9B36005D1974 /* PSAppDelegate.m */,
 				CD09CF7C18FD9BAC005D1974 /* TableViewController.h */,
 				CD09CF7D18FD9BAC005D1974 /* TableViewController.m */,
+				CD63A53F18FE0141005743D0 /* Profile.h */,
+				CD63A54018FE0141005743D0 /* Profile.m */,
 				CD09CF5D18FD9B36005D1974 /* Images.xcassets */,
 				CD09CF5218FD9B36005D1974 /* Supporting Files */,
 				CD09CF7A18FD9B52005D1974 /* MainStoryboard.storyboard */,
@@ -250,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD09CF5818FD9B36005D1974 /* main.m in Sources */,
+				CD63A54118FE0141005743D0 /* Profile.m in Sources */,
 				CD09CF7E18FD9BAC005D1974 /* TableViewController.m in Sources */,
 				CD09CF5C18FD9B36005D1974 /* PSAppDelegate.m in Sources */,
 			);
@@ -448,6 +454,7 @@
 				CD09CF7618FD9B36005D1974 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD09CF7718FD9B36005D1974 /* Build configuration list for PBXNativeTarget "AppDev DirectoryTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +463,7 @@
 				CD09CF7918FD9B36005D1974 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

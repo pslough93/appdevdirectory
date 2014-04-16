@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Profile.h"
 
 @interface TableViewController : UITableViewController
 
-@property (strong, nonatomic) NSArray *profiles;
+@property (strong, nonatomic) NSMutableArray *profiles;
 
 @end

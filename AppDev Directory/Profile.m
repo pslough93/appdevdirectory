@@ -12,15 +12,21 @@
 
 - (id) initWithName:(NSString *)name{
     self = [super init];
-    
-    if (self){
-        self.name = name;
-    }
+    if (self) {
+        [self setName:name];
+        self.year = nil;
+        self.image = nil;
+    };
     return self;
-}
+};
 
 + (id) profileWithName:(NSString *)name{
     return [[self alloc] initWithName:name];
-}
+};
+
+- (NSURL*) imageURL{
+    return [NSURL URLWithString:self.image];
+};
+
 
 @end
