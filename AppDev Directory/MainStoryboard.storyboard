@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Table View Controller - AppDev Directory-->
         <scene sceneID="Yle-ph-47w">
             <objects>
                 <tableViewController id="K1V-Kx-Mw5" customClass="TableViewController" sceneMemberID="viewController">
@@ -39,7 +39,7 @@
                             <outlet property="delegate" destination="K1V-Kx-Mw5" id="NYn-rJ-XLw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="rkP-5S-OU3"/>
+                    <navigationItem key="navigationItem" title="AppDev Directory" id="rkP-5S-OU3"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ESr-HS-QlP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -58,18 +58,29 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableViewCell contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ap4-6B-Wvt">
-                                <rect key="frame" x="0.0" y="63" width="320" height="44"/>
+                                <rect key="frame" x="128" y="152" width="192" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ap4-6B-Wvt" id="wMH-oF-mjZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="192" height="39"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="Kt0-CA-vKa">
-                                <rect key="frame" x="0.0" y="115" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="232" width="320" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kt0-CA-vKa" id="Ylv-S9-DO3">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ttZ-gR-hA7">
+                                <rect key="frame" x="0.0" y="64" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <tableViewCell contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="vuF-V5-iHN">
+                                <rect key="frame" x="0.0" y="192" width="320" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vuF-V5-iHN" id="q4E-bp-xy2">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -78,7 +89,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="hVf-Nx-4ur"/>
                     <connections>
+                        <outlet property="detailPicture" destination="ttZ-gR-hA7" id="yUa-Vv-Xhd"/>
                         <outlet property="nameLabel" destination="Ap4-6B-Wvt" id="mv4-Ma-Tui"/>
+                        <outlet property="roleLabel" destination="vuF-V5-iHN" id="b1N-BF-VqM"/>
                         <outlet property="yearLabel" destination="Kt0-CA-vKa" id="8LK-mX-ReL"/>
                     </connections>
                 </viewController>

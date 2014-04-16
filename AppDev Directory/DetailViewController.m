@@ -29,6 +29,13 @@
     // Do any additional setup after loading the view.
     self.nameLabel.textLabel.text = self.detailName;
     self.yearLabel.textLabel.text = [NSString stringWithFormat:@"Class of %@", self.detailYear];
+    self.roleLabel.textLabel.text = self.detailRole;
+    
+    NSURL *imageURL = [NSURL URLWithString:self.detailImage];
+    NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+    UIImage *newImage = [UIImage imageWithData:imageData];
+    self.detailPicture.image = newImage;
+
 }
 
 - (void)didReceiveMemoryWarning

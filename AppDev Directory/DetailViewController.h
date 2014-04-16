@@ -12,5 +12,9 @@
 @property (strong, nonatomic) IBOutlet UITableViewCell *nameLabel;
 @property (strong, nonatomic) NSString *detailName;
 @property (strong, nonatomic) IBOutlet UITableViewCell *yearLabel;
-@property (strong, nonatomic) NSString * detailYear;
+@property (strong, nonatomic) NSString *detailYear;
+@property (strong, nonatomic) IBOutlet UIImageView *detailPicture;
+@property (strong, nonatomic) NSString *detailImage;
+@property (strong, nonatomic) IBOutlet UITableViewCell *roleLabel;
+@property (strong, nonatomic) NSString *detailRole;
 @end

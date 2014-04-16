@@ -45,6 +45,7 @@
         Profile * profile = [Profile profileWithName:[profDict objectForKey:@"name"]];
         profile.year = [profDict objectForKey:@"year"];
         profile.image = [profDict objectForKey:@"image"];
+        profile.role = [profDict objectForKey:@"role"];
         [self.profiles addObject:profile];
     }
 
@@ -92,7 +93,8 @@
         Profile *profile = [self.profiles objectAtIndex:indexPath.row];
         [segue.destinationViewController setDetailName: profile.name];
         [segue.destinationViewController setDetailYear: profile.year];
-
+        [segue.destinationViewController setDetailImage:profile.image];
+        [segue.destinationViewController setDetailRole: profile.role];
     }
 }
 
