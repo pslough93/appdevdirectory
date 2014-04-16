@@ -45,10 +45,10 @@
             </objects>
             <point key="canvasLocation" x="718" y="26"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="chX-4U-42T">
             <objects>
-                <viewController id="fzc-AO-ikr" sceneMemberID="viewController">
+                <viewController id="fzc-AO-ikr" customClass="DetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uaJ-oY-K0k"/>
                         <viewControllerLayoutGuide type="bottom" id="5a1-Zg-yZy"/>
@@ -56,9 +56,31 @@
                     <view key="view" contentMode="scaleToFill" id="lsX-e2-1NG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableViewCell contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ap4-6B-Wvt">
+                                <rect key="frame" x="0.0" y="63" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ap4-6B-Wvt" id="wMH-oF-mjZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="Kt0-CA-vKa">
+                                <rect key="frame" x="0.0" y="115" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kt0-CA-vKa" id="Ylv-S9-DO3">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="hVf-Nx-4ur"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="Ap4-6B-Wvt" id="mv4-Ma-Tui"/>
+                        <outlet property="yearLabel" destination="Kt0-CA-vKa" id="8LK-mX-ReL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jkG-EE-n3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

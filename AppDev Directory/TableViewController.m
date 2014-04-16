@@ -8,6 +8,7 @@
 
 #import "TableViewController.h"
 #import "Profile.h"
+#import "DetailViewController.h"
 
 @interface TableViewController ()
 
@@ -84,7 +85,16 @@
     return cell;
 }
 
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    NSLog(@"%@", segue.identifier);
+    if ([segue.identifier isEqualToString:@"showDetail"]){
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        Profile *profile = [self.profiles objectAtIndex:indexPath.row];
+        [segue.destinationViewController setDetailName: profile.name];
+        [segue.destinationViewController setDetailYear: profile.year];
 
+    }
+}
 
 
 @end
