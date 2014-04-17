@@ -66,4 +66,13 @@
 */
 
 
+- (IBAction)callPhone:(id)sender {
+    NSString *callString = [NSString stringWithFormat:@"telprompt://%@", self.detailCellphone];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:callString]];
+}
+
+- (IBAction)makeEmail:(id)sender {
+    NSString *emailString = [NSString stringWithFormat:@"mailto:%@", self.detailEmail];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:emailString]];
+}
 @end

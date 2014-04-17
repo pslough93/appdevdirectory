@@ -23,5 +23,7 @@
 @property (strong, nonatomic) NSString *detailEmail;
 @property (strong, nonatomic) IBOutlet UITableViewCell *cellphoneLabel;
 @property (strong, nonatomic) NSString *detailCellphone;
+- (IBAction)callPhone:(id)sender;
+- (IBAction)makeEmail:(id)sender;
 
 @end
