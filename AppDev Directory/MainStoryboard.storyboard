@@ -61,7 +61,6 @@
                                 <rect key="frame" x="128" y="152" width="192" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ap4-6B-Wvt" id="wMH-oF-mjZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="192" height="39"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -80,6 +79,21 @@
                                 <rect key="frame" x="0.0" y="192" width="320" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vuF-V5-iHN" id="q4E-bp-xy2">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="ONr-pY-JXS">
+                                <rect key="frame" x="0.0" y="272" width="320" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ONr-pY-JXS" id="8Fa-dP-cA5">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="neB-mf-8QB">
+                                <rect key="frame" x="0.0" y="312" width="320" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="neB-mf-8QB" id="WVH-vI-Kch">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
@@ -89,7 +103,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="hVf-Nx-4ur"/>
                     <connections>
+                        <outlet property="cellphoneLabel" destination="neB-mf-8QB" id="xZg-nX-G6u"/>
                         <outlet property="detailPicture" destination="ttZ-gR-hA7" id="yUa-Vv-Xhd"/>
+                        <outlet property="emailLabel" destination="ONr-pY-JXS" id="RkY-10-aQv"/>
                         <outlet property="nameLabel" destination="Ap4-6B-Wvt" id="mv4-Ma-Tui"/>
                         <outlet property="roleLabel" destination="vuF-V5-iHN" id="b1N-BF-VqM"/>
                         <outlet property="yearLabel" destination="Kt0-CA-vKa" id="8LK-mX-ReL"/>

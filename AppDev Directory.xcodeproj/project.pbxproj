@@ -21,6 +21,7 @@
 		CD09CF7118FD9B36005D1974 /* AppDev_DirectoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD09CF7018FD9B36005D1974 /* AppDev_DirectoryTests.m */; };
 		CD09CF7B18FD9B52005D1974 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD09CF7A18FD9B52005D1974 /* MainStoryboard.storyboard */; };
 		CD09CF7E18FD9BAC005D1974 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD09CF7D18FD9BAC005D1974 /* TableViewController.m */; };
+		CD4DD94B18FF20EC00094892 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD4DD94A18FF20EC00094892 /* MessageUI.framework */; };
 		CD63A54118FE0141005743D0 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = CD63A54018FE0141005743D0 /* Profile.m */; };
 		CD8DBD6E18FE39A100C5E05E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8DBD6D18FE39A100C5E05E /* DetailViewController.m */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		CD09CF7A18FD9B52005D1974 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		CD09CF7C18FD9BAC005D1974 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		CD09CF7D18FD9BAC005D1974 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		CD4DD94A18FF20EC00094892 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		CD63A53F18FE0141005743D0 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
 		CD63A54018FE0141005743D0 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
 		CD8DBD6C18FE39A100C5E05E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD4DD94B18FF20EC00094892 /* MessageUI.framework in Frameworks */,
 				CD09CF4E18FD9B36005D1974 /* CoreGraphics.framework in Frameworks */,
 				CD09CF5018FD9B36005D1974 /* UIKit.framework in Frameworks */,
 				CD09CF4C18FD9B36005D1974 /* Foundation.framework in Frameworks */,
@@ -107,6 +110,7 @@
 		CD09CF4A18FD9B35005D1974 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD4DD94A18FF20EC00094892 /* MessageUI.framework */,
 				CD09CF4B18FD9B36005D1974 /* Foundation.framework */,
 				CD09CF4D18FD9B36005D1974 /* CoreGraphics.framework */,
 				CD09CF4F18FD9B36005D1974 /* UIKit.framework */,

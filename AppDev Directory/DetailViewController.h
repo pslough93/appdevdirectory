@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
 @interface DetailViewController : UIViewController
+
 @property (strong, nonatomic) IBOutlet UITableViewCell *nameLabel;
 @property (strong, nonatomic) NSString *detailName;
 @property (strong, nonatomic) IBOutlet UITableViewCell *yearLabel;
@@ -17,4 +19,9 @@
 @property (strong, nonatomic) NSString *detailImage;
 @property (strong, nonatomic) IBOutlet UITableViewCell *roleLabel;
 @property (strong, nonatomic) NSString *detailRole;
+@property (strong, nonatomic) IBOutlet UITableViewCell *emailLabel;
+@property (strong, nonatomic) NSString *detailEmail;
+@property (strong, nonatomic) IBOutlet UITableViewCell *cellphoneLabel;
+@property (strong, nonatomic) NSString *detailCellphone;
+
 @end

@@ -46,6 +46,8 @@
         profile.year = [profDict objectForKey:@"year"];
         profile.image = [profDict objectForKey:@"image"];
         profile.role = [profDict objectForKey:@"role"];
+        profile.email = [profDict objectForKey:@"email"];
+        profile.cellphone = [profDict objectForKey:@"cellphone"];
         [self.profiles addObject:profile];
     }
 
@@ -93,8 +95,10 @@
         Profile *profile = [self.profiles objectAtIndex:indexPath.row];
         [segue.destinationViewController setDetailName: profile.name];
         [segue.destinationViewController setDetailYear: profile.year];
-        [segue.destinationViewController setDetailImage:profile.image];
+        [segue.destinationViewController setDetailImage: profile.image];
         [segue.destinationViewController setDetailRole: profile.role];
+        [segue.destinationViewController setDetailEmail: profile.email];
+        [segue.destinationViewController setDetailCellphone: profile.cellphone];
     }
 }
 
